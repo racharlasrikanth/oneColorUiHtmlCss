@@ -1,0 +1,117 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  // font-family: "Montserrat", sans-serif;
+  font-family: "Bree Serif", serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Lobster", sans-serif;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: 8rem;
+  font-family: "Lobster", sans-serif;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2.5rem;
+}
+
+li {
+  font-size: 2rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+@import "./home";
+@import "./features";
+@import "./soon";
+@import "./footer";
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 45%;
+  }
+
+  nav {
+    #logo {
+      flex: 1;
+    }
+    ul {
+      ul {
+        margin-left: 5rem;
+      }
+    }
+  }
+
+  .showcase {
+    grid-template-columns: 10% 1fr 10%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    img,
+    h2,
+    .info {
+      grid-column: 2/3;
+      text-align: center;
+    }
+  }
+
+  .features {
+    align-items: center;
+    overflow: hidden;
+    h2 {
+      margin-top: 5rem;
+    }
+    .cards {
+      flex-direction: column;
+      width: 100%;
+      .card {
+        margin: 5rem 0rem;
+      }
+    }
+  }
+
+  .soon {
+    overflow: hidden;
+    img {
+      width: 70%;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 4rem;
+      text-align: center;
+    }
+  }
+
+  footer {
+    h1 {
+      flex: 1;
+    }
+  }
+}
